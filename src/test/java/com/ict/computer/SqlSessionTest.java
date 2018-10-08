@@ -18,7 +18,7 @@ public class SqlSessionTest {
 
 	@Test
 	public void test() {
-		System.out.println(ss.selectOne("SQL.LEVELINFO.selectDate"));
+		System.out.println(ss.selectOne("SQL.COMPUTER.selectDate"));
 	}
 
 }
