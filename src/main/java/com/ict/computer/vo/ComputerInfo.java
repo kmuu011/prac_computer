@@ -1,5 +1,8 @@
 package com.ict.computer.vo;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("ci")
 public class ComputerInfo {
 	
 	private Integer cino;
