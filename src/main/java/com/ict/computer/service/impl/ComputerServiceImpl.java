@@ -26,5 +26,10 @@ public class ComputerServiceImpl implements ComputerService{
 		return cd.insertComputerInfo(ci);
 	}
 
+	@Override
+	public Integer getDeleteResult(List<Integer> deleteNo) {
+		return cd.deleteComputerInfo(deleteNo);
+	}
+
 
 }

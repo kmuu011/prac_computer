@@ -26,6 +26,16 @@ public class ComputerDAOImpl implements ComputerDAO{
 	public Integer insertComputerInfo(ComputerInfo ci) {
 		return ss.insert("SQL.COMPUTER.insertComputerInfo", ci);
 	}
+
+
+	@Override
+	public Integer deleteComputerInfo(List<Integer> deleteNo) {
+		Integer result = 0;
+		for(int cino:deleteNo) {
+			result += ss.delete("SQL.COMPUTER.deleteComputerInfo",cino);
+		}
+		return result;
+	}
 	
 	
 

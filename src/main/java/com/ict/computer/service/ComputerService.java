@@ -9,4 +9,6 @@ public interface ComputerService {
 	public List<ComputerInfo> getComputerInfoList(ComputerInfo ci);
 	
 	public Integer getInsertResult(ComputerInfo ci);
+	
+	public Integer getDeleteResult(List<Integer> deleteNo);
 }

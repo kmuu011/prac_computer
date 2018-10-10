@@ -43,15 +43,20 @@ public class ComputerServlet {
 		return cs.getInsertResult(ci);
 	}
 	
-	@RequestMapping(value="/computerinfod", method=RequestMethod.POST)
+	@RequestMapping(value="/computerinfoD", method=RequestMethod.POST)
 	@ResponseBody
 	public Integer computerInfoDelete(@RequestBody List<Integer> deleteNo) {
 		System.out.println(deleteNo);
-		System.out.println("타나");
-		return null;
+		return cs.getDeleteResult(deleteNo);
 	}
 	
 	
+	@RequestMapping(value="/computerSearch", method=RequestMethod.POST)
+	@ResponseBody
+	public List<ComputerInfo> searchComputerInfo(@RequestBody ComputerInfo ci){
+			System.out.println(ci);
+		return cs.getComputerInfoList(ci);
+	}
 	
 	
 	

@@ -10,5 +10,7 @@ public interface ComputerDAO {
 
 	public Integer insertComputerInfo(ComputerInfo ci);
 	
+	public Integer deleteComputerInfo(List<Integer> deleteNo);
+	
 
 }

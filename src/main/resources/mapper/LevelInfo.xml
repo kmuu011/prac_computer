@@ -9,6 +9,9 @@
 
 	<select id="selectComputerInfoList" resultType="ci" parameterType="ci">
 		select * from computer_info
+		<if test="ciname!=null">
+			where ciname like '%' || #{ciname} || '%'
+		</if>
 		
 		order by cino desc
 	</select>
@@ -18,5 +21,9 @@
 		(seq_computer.nextval, #{ciname}, #{cipower}, #{cicpu},
 		#{cimb}, #{ciram}, #{civga}, #{cihdd}, #{cissd}, #{ciodd}, #{cicase})
 	</insert>
+	
+	<delete id="deleteComputerInfo" parameterType="Integer">
+		delete from computer_info where cino=#{cino}
+	</delete>
 	
 </mapper>
