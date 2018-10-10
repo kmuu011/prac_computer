@@ -11,7 +11,7 @@
 <form id="form">
 
 <input type="text" id="sch">
-<select id="op">
+<select multiple class="form-control"  id="op">
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
 	<option value="cipower">Power</option>
@@ -28,7 +28,7 @@
 
 	<table  class="table table-bordered table-hover">
 	
-		<thead class="thead-dark" >
+		<thead  id="tHead">
 
 		</thead>
 		
