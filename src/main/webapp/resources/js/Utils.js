@@ -36,7 +36,7 @@ var getInfoList = function(list){
 }
 
 var getView = function(list){
-	var html = '<table class="table table-bordered table-hover">';
+	var html = '<table id="viewtable" class="table table-bordered table-hover">';
 	
 	for(var k in list[0]){
 		html += '<tr>';
@@ -51,7 +51,7 @@ var getView = function(list){
 }
 
 var getModify = function(list){
-	var html = '<table class="table table-bordered table-hover">';
+	var html = '<table id="viewtable" class="table table-bordered table-hover">';
 	
 	for(var k in list[0]){
 		html += '<tr>';
