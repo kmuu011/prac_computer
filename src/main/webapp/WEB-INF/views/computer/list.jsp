@@ -10,10 +10,8 @@
 <body>
 <form id="form">
 
-<<<<<<< HEAD
-<input type="text" name="ciname">
-<button class="btn btn-secondary" >검색</button><br><br>
-=======
+
+
 <input type="text" id="sch">
 <select id="op">
 	<option value="ciname">이름</option>
@@ -27,8 +25,8 @@
 	<option value="ciodd">ODD</option>
 	<option value="cicase">CASE</option>
 </select>
-<button type="button">검색</button><br><br>
->>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
+<button type="button" class="btn btn-secondary">검색</button><br><br>
+
 
 	<table border="1">
 	
@@ -42,14 +40,16 @@
 		
 	</table>
 	
-<<<<<<< HEAD
-	<button class="btn btn-secondary" >등록</button>
-	<button class="btn btn-secondary" >삭제</button>
-=======
-	<button type="button">등록</button>
-	<button type="button">삭제</button>
+
+
+	<button type="button" class="btn btn-secondary">등록</button>
+	<button type="button" class="btn btn-secondary">삭제</button>
 </form>
 >>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
+=======
+	<button>등록</button>
+	<button>삭제</button>
+>>>>>>> 5db5832 button
 
 
 <script>
