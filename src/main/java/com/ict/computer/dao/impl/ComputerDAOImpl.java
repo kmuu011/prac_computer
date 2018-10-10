@@ -36,6 +36,13 @@ public class ComputerDAOImpl implements ComputerDAO{
 		}
 		return result;
 	}
+
+
+	@Override
+	public Integer updateComputerInfo(ComputerInfo ci) {
+		
+		return ss.update("SQL.COMPUTER.updateComputerInfo",ci);
+	}
 	
 	
 

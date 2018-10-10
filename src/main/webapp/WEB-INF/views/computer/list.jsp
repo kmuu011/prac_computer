@@ -8,6 +8,7 @@
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
+<form id="form">
 
 <input type="text" id="sch">
 <select id="op">
@@ -22,7 +23,7 @@
 	<option value="ciodd">ODD</option>
 	<option value="cicase">CASE</option>
 </select>
-<button>검색</button><br><br>
+<button type="button">검색</button><br><br>
 
 	<table border="1">
 	
@@ -36,8 +37,9 @@
 		
 	</table>
 	
-	<button>등록</button>
-	<button>삭제</button>
+	<button type="button">등록</button>
+	<button type="button">삭제</button>
+</form>
 
 
 <script>
@@ -51,7 +53,6 @@
 			var conf = {url : '/computerinfo',
 				success:getList
 				};
-		
 			
 			var au = new AjaxUtil(conf);
 			au.send();
@@ -131,6 +132,54 @@
 		document.querySelectorAll("input[name=chk]").forEach((d) => {
 			d.checked = e.checked;
 		});
+	}
+	
+
+	function ciView(cino){
+		var url = "/computerinfo/" + cino;
+		var conf = {url:url,
+				success:viewInfo};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+		
+		function viewInfo(res){
+			document.querySelector("#form").innerHTML = getView(JSON.parse(res));
+		}
+	}
+	
+	function modify(cino){
+		var url = "/computerinfo/" + cino;
+		var conf = {url:url,
+				success:updateView};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+
+		function updateView(res){
+			document.querySelector('#form').innerHTML = getModify(JSON.parse(res));
+		}
+	}
+	
+	function updateInfo(){
+		var form = document.querySelector("form");
+		var formData = new FormData(form);
+		
+		var params = formDataToJson(formData);
+				
+		var conf = {url:"/computerinfo",
+						method:"PUT",
+						params:params,
+						success:success
+		};
+		
+		function success(res){
+			alert("수정 완료!");
+			location.href="/uri/computer:list";
+		}
+			
+		var au = new AjaxUtil(conf);
+		au.send();
 	}
 
 </script>

@@ -31,5 +31,10 @@ public class ComputerServiceImpl implements ComputerService{
 		return cd.deleteComputerInfo(deleteNo);
 	}
 
+	@Override
+	public Integer getUpdateResult(ComputerInfo ci) {
+		return cd.updateComputerInfo(ci);
+	}
+
 
 }

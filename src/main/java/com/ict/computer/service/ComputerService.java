@@ -11,4 +11,6 @@ public interface ComputerService {
 	public Integer getInsertResult(ComputerInfo ci);
 	
 	public Integer getDeleteResult(List<Integer> deleteNo);
+	
+	public Integer getUpdateResult(ComputerInfo ci);
 }
