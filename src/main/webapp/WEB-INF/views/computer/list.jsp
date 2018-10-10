@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
+<style="cursor:pointer">
+</style>
 <body>
 <form id="form">
 <div class="form row">
