@@ -8,9 +8,27 @@
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
+<form id="form">
 
+<<<<<<< HEAD
 <input type="text" name="ciname">
 <button class="btn btn-secondary" >검색</button><br><br>
+=======
+<input type="text" id="sch">
+<select id="op">
+	<option value="ciname">이름</option>
+	<option value="cicpu">CPU</option>
+	<option value="cipower">Power</option>
+	<option value="cimb">Mainboard</option>
+	<option value="ciram">RAM</option>
+	<option value="civga">VGA</option>
+	<option value="cihdd">HDD</option>
+	<option value="cissd">SSD</option>
+	<option value="ciodd">ODD</option>
+	<option value="cicase">CASE</option>
+</select>
+<button type="button">검색</button><br><br>
+>>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
 
 	<table border="1">
 	
@@ -24,25 +42,36 @@
 		
 	</table>
 	
+<<<<<<< HEAD
 	<button class="btn btn-secondary" >등록</button>
 	<button class="btn btn-secondary" >삭제</button>
+=======
+	<button type="button">등록</button>
+	<button type="button">삭제</button>
+</form>
+>>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
 
 
 <script>
 	window.addEventListener('load', showList());
 	
-	function showList(){
-		var conf = {url : '/computerinfo',
-			success:getList
-			};
-	
+	function showList(search){
 		var head = '';
 		var body = '';
 		
-		var au = new AjaxUtil(conf);
-		au.send();
+		if(!search){
+			var conf = {url : '/computerinfo',
+				success:getList
+				};
+			
+			var au = new AjaxUtil(conf);
+			au.send();
+		}else{
+			getList(search);
+		}
 		
 		function getList(res){
+			
 			res = JSON.parse(res);
 			
 			if(!head){
@@ -68,32 +97,42 @@
 					list.push(e.value);
 				});
 				
-				var url = "/computerinfod";
+				var url = "/computerinfoD";
 				var method = "POST";
 				var params = JSON.stringify(list);
-				alert(params)
 				var conf = {url:url,
 						method:method,
-						params:params};
+						params:params,
+						success:successDel
+				};
 				
 				var au = new AjaxUtil(conf);
 				au.send();
 				
-				/* var xhr = new XMLHttpRequest();
-			
-				xhr.onreadystatechange = function(){
-					if(xhr.readyState == xhr.DONE){
-						if(xhr.status == 200){
-							alert(1);
-						}
-					}
+				function successDel(res){
+					alert(JSON.parse(res) + "개 삭제 완료");
+					showList();
 				}
 				
-				xhr.open(method,url);
-				xhr.setRequestHeader('Content-type','application/json;charset=utf-8');
-				xhr.send(params); */
-				
 			}else if(this.innerHTML=='검색'){
+				var op = document.querySelector("#op").value;
+				var sch = document.querySelector("#sch").value;
+				
+				var url = "/computerSearch";
+				var method = "POST";
+				var params = '{"' + op + '":"' + sch + '"}';
+				var conf = {url:url,
+						method:method,
+						params:params,
+						success:search
+						};
+				
+				var au = new AjaxUtil(conf);
+				au.send();
+				
+				function search(res){
+					showList(res);
+				}
 				
 			}
 		}
@@ -103,6 +142,54 @@
 		document.querySelectorAll("input[name=chk]").forEach((d) => {
 			d.checked = e.checked;
 		});
+	}
+	
+
+	function ciView(cino){
+		var url = "/computerinfo/" + cino;
+		var conf = {url:url,
+				success:viewInfo};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+		
+		function viewInfo(res){
+			document.querySelector("#form").innerHTML = getView(JSON.parse(res));
+		}
+	}
+	
+	function modify(cino){
+		var url = "/computerinfo/" + cino;
+		var conf = {url:url,
+				success:updateView};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+
+		function updateView(res){
+			document.querySelector('#form').innerHTML = getModify(JSON.parse(res));
+		}
+	}
+	
+	function updateInfo(){
+		var form = document.querySelector("form");
+		var formData = new FormData(form);
+		
+		var params = formDataToJson(formData);
+				
+		var conf = {url:"/computerinfo",
+						method:"PUT",
+						params:params,
+						success:success
+		};
+		
+		function success(res){
+			alert("수정 완료!");
+			location.href="/uri/computer:list";
+		}
+			
+		var au = new AjaxUtil(conf);
+		au.send();
 	}
 
 </script>

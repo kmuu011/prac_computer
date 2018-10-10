@@ -36,6 +36,14 @@ public class ComputerServlet {
 		return cs.getComputerInfoList(null);
 	}
 	
+	@RequestMapping(value="/computerinfo/{cino}", method=RequestMethod.GET)
+	@ResponseBody
+	public List<ComputerInfo> getComputerInfo(@PathVariable Integer cino){
+		ComputerInfo ci = new ComputerInfo();
+		ci.setCino(cino);
+		return cs.getComputerInfoList(ci);
+	}
+	
 	@RequestMapping(value="/computerinfo", method=RequestMethod.POST)
 	@ResponseBody
 	public Integer computerInfoInsert(@RequestBody ComputerInfo ci){
@@ -43,15 +51,28 @@ public class ComputerServlet {
 		return cs.getInsertResult(ci);
 	}
 	
-	@RequestMapping(value="/computerinfod", method=RequestMethod.POST)
+	@RequestMapping(value="/computerinfoD", method=RequestMethod.POST)
 	@ResponseBody
 	public Integer computerInfoDelete(@RequestBody List<Integer> deleteNo) {
 		System.out.println(deleteNo);
-		System.out.println("타나");
-		return null;
+		return cs.getDeleteResult(deleteNo);
 	}
 	
 	
+	@RequestMapping(value="/computerSearch", method=RequestMethod.POST)
+	@ResponseBody
+	public List<ComputerInfo> searchComputerInfo(@RequestBody ComputerInfo ci){
+			System.out.println(ci);
+		return cs.getComputerInfoList(ci);
+	}
+	
+	@RequestMapping(value="/computerinfo", method=RequestMethod.PUT)
+	@ResponseBody
+	public Integer updateComputerInfo(@RequestBody ComputerInfo ci) {
+		
+		System.out.println(ci);
+		return cs.getUpdateResult(ci);
+	}
 	
 	
 	

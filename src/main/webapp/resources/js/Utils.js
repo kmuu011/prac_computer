@@ -1,14 +1,9 @@
 var formDataToJson = function(formData){
-	
-var params = '{' ;
-	
+	var paramObj = {};
 	formData.forEach((e,k) =>{
-		params += '"' + k +'":"' + e + '",'; 
+		paramObj[k] = e;
 	})
-	params = params.substring(0,params.lastIndexOf(','));
-	params += '}';
-	
-	return params;
+	return JSON.stringify(paramObj);
 }
 
 var getMetaData = function(e){
@@ -29,13 +24,47 @@ var getInfoList = function(list){
 	list.forEach((e) => {
 		body += '<tr>';
 		body += '<td><input type="checkbox" name="chk" value="' + e["cino"] + '"></td>';
+		
 		for(var k in e){
-			body += '<td>' + e[k] + '</td>';
+			body += '<td onclick="ciView(' + e["cino"] + ')">' + e[k] + '</td>';
 		}
 		
 		body += '</tr>';
 		
 	});
-		
 	return body; 
 }
+
+var getView = function(list){
+	var html = '<table border="1">';
+	
+	
+	for(var k in list[0]){
+		html += '<tr>';
+		html += '<th>' + k + '</th><td>' + list[0][k] + '</td>';
+		html += '</tr>';
+	}
+	
+	html += '<tr><td><button onclick="modify(' + list[0]["cino"] + ')" type="button">수정</button></td></tr>';
+	html += '</table>';
+	
+	return html;
+}
+
+var getModify = function(list){
+	var html = '<table border="1">';
+	
+	for(var k in list[0]){
+		html += '<tr>';
+		if(k.indexOf('cino') != -1){
+			html += '<th>' + k + '</th><td>' + list[0][k] + '<input type="hidden" name="' + k + '" value="' + list[0][k] + '"></td>';			
+		}else{
+			html += '<th>' + k + '</th><td><input type="text" name="' + k + '" value="' + list[0][k] + '"></td>';
+		}
+		html += '</tr>';
+	}
+	html += '<tr><td><button onclick="updateInfo()" type="button">수정완료</button></td></tr>';
+	html += '</table>';
+	
+	return html;
+};

@@ -49,8 +49,14 @@ function insert(){
 	
 	var conf = {url:form.getAttribute('action'),
 					method:form.getAttribute('method'),
-					params:params
+					params:params,
+					success:success
 	};
+	
+	function success(res){
+		alert("등록 성공!");
+		location.href="/uri/computer:list";
+	}
 		
 	var au = new AjaxUtil(conf);
 	au.send();

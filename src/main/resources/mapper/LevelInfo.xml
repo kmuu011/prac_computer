@@ -9,6 +9,12 @@
 
 	<select id="selectComputerInfoList"  resultType="ci" parameterType="ci">
 		select * from computer_info
+		<if test="cino!=null">
+			where cino = #{cino}
+		</if>
+		<if test="ciname!=null">
+			where ciname like '%' || #{ciname} || '%'
+		</if>
 		
 		order by cino desc
 	</select>
@@ -19,4 +25,24 @@
 		#{cimb}, #{ciram}, #{civga}, #{cihdd}, #{cissd}, #{ciodd}, #{cicase})
 	</insert>
 	
+	<delete id="deleteComputerInfo" parameterType="Integer">
+		delete from computer_info where cino=#{cino}
+	</delete>
+	
+	<update id="updateComputerInfo" parameterType="ci">
+	update computer_info
+	<set>
+		<if test="ciname!=null">ciname = #{ciname},</if>
+		<if test="cipower!=null">cipower = #{cipower},</if>
+		<if test="cicpu!=null">cicpu = #{cicpu},</if>
+		<if test="cimb!=null">cimb = #{cimb},</if>
+		<if test="ciram!=null">ciram = #{ciram},</if>
+		<if test="civga!=null">civga = #{civga},</if>
+		<if test="cihdd!=null">cihdd = #{cihdd},</if>
+		<if test="cissd!=null">cissd = #{cissd},</if>
+		<if test="ciodd!=null">ciodd = #{ciodd},</if>
+		<if test="cicase!=null">cicase = #{cicase},</if>
+	</set>
+	where cino=${cino}
+	</update>
 </mapper>
