@@ -9,8 +9,9 @@
 </head>
 <body>
 <form id="form">
-
-<input type="text" id="sch" placeholder="검색">
+<div class="form-group">
+<input type="text"  class="form-control"  id="sch" placeholder="검색">
+</div>
 <select  id="op">
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
