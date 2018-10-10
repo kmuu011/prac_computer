@@ -10,7 +10,7 @@
 <body>
 
 <input type="text" name="ciname">
-<button>검색</button><br><br>
+<button class="btn btn-secondary" >검색</button><br><br>
 
 	<table border="1">
 	
@@ -24,8 +24,8 @@
 		
 	</table>
 	
-	<button>등록</button>
-	<button>삭제</button>
+	<button class="btn btn-secondary" >등록</button>
+	<button class="btn btn-secondary" >삭제</button>
 
 
 <script>

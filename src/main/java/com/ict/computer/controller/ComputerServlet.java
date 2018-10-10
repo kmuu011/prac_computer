@@ -22,7 +22,7 @@ public class ComputerServlet {
 	
 	@Autowired
 	ComputerService cs;
-	
+
 	@RequestMapping(value="/computerinfoMD", method=RequestMethod.GET)
 	@ResponseBody
 	public ComputerInfo getComputerInfoMetaData(ComputerInfo ci) {

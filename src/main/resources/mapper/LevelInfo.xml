@@ -7,13 +7,13 @@
 		select to_char(sysdate, 'YYYY-MM-DD') from dual
 	</select>
 
-	<select id="selectComputerInfoList" resultType="ci" parameterType="ci">
+	<select id="selectComputerInfoList"  resultType="ci" parameterType="ci">
 		select * from computer_info
 		
 		order by cino desc
 	</select>
 	
-	<insert id="insertComputerInfo" parameterType="ci">
+	<insert id="insertComputerInfo"  parameterType="ci">
 		insert into computer_info values
 		(seq_computer.nextval, #{ciname}, #{cipower}, #{cicpu},
 		#{cimb}, #{ciram}, #{civga}, #{cihdd}, #{cissd}, #{ciodd}, #{cicase})

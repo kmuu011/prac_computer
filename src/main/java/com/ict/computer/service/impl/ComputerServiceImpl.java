@@ -17,7 +17,6 @@ public class ComputerServiceImpl implements ComputerService{
 	
 	@Override
 	public List<ComputerInfo> getComputerInfoList(ComputerInfo ci) {
-		
 		return cd.selectComputerInfoList(ci);
 	}
 
