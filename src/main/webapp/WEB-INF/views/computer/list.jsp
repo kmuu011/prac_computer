@@ -26,10 +26,9 @@
 
 <button type="button" class="btn btn-secondary">검색</button><br><br>
 
-
-	<table border="1">
+	<table  class="table table-bordered table-hover">
 	
-		<thead id="tHead">
+		<thead class="thead-dark"  id="tHead">
 
 		</thead>
 		
