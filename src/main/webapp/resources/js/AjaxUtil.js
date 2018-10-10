@@ -2,7 +2,7 @@
 var AjaxUtil = function(conf){
 	var url = conf.url;
 	var method = conf.method?conf.method:'GET';
-	var param = conf.param?conf.param:'';
+	var params = conf.params?conf.params:'';
 	
 	
 	var comFail = function(res){
@@ -34,11 +34,11 @@ var AjaxUtil = function(conf){
 	this.send = function(){
 		xhr.open(method,url);
 		
-		if(method != 'GET'){
+		if(method == 'POST'){
 			xhr.setRequestHeader('Content-type','application/json;charset=utf-8');
 		}
 		
-		xhr.send(param);		
+		xhr.send(params);		
 	}
 	
 	

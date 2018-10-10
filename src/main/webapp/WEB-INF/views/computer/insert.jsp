@@ -5,10 +5,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>Insert title here</title>
-
-<script src="/rsc/js/AjaxUtil.js?ver=0.1"></script>
-<script src="/rsc/js/Utils.js?ver=0.1"></script>
-
+<jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
 <form id="form" method="POST" action="/computerinfo" enctype="multipart/form-data">
@@ -52,7 +49,7 @@ function insert(){
 	
 	var conf = {url:form.getAttribute('action'),
 					method:form.getAttribute('method'),
-					param:params
+					params:params
 	};
 		
 	var au = new AjaxUtil(conf);
