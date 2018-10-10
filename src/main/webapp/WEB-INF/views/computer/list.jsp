@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
-<style="cursor:pointer">
-</style>
+
 <body>
-<form id="form">
+<form id="form" onsubmit="return false;">
 <div class="form row">
 <div class="col-7">
 <select class="custom-select mr-sm-2"  id="op"  required>
@@ -29,21 +28,21 @@
 <div class="invalid-feedback">항목을 선택해야합니다.</div>
 </div>
 <div class="col">
-<input type="text"  class="form-control"  id="sch" placeholder="검색어 입력"  required>
+<input type="text"  class="form-control"  id="sch" placeholder="검색어 입력" onkeypress="if(event.keyCode==13){search();}" required>
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
 </div>
 
 
-<button type="button" class="btn btn-secondary">검색</button><br><br>
+<button type="button" onclick="search()" class="btn btn-secondary">검색</button><br><br>
 
-	<table  class="table table-bordered table-hover"  style="cursor:pointer" >
+	<table class="table table-bordered table-hover">
 	
 		<thead  id="tHead">
 
 		</thead>
 		
-		<tbody id="tBody">
+		<tbody id="tBody" style="cursor:pointer">
 		
 		</tbody>
 		
@@ -118,28 +117,33 @@
 				}
 				
 			}else if(this.innerHTML=='검색'){
-				var op = document.querySelector("#op").value;
-				var sch = document.querySelector("#sch").value;
-				
-				var url = "/computerSearch";
-				var method = "POST";
-				var params = '{"' + op + '":"' + sch + '"}';
-				var conf = {url:url,
-						method:method,
-						params:params,
-						success:search
-						};
-				
-				var au = new AjaxUtil(conf);
-				au.send();
-				
-				function search(res){
-					showList(res);
-				}
+				search();
 				
 			}
 		}
 	});
+	
+	function search(){
+		var op = document.querySelector("#op").value;
+		var sch = document.querySelector("#sch").value;
+		
+		var url = "/computerSearch";
+		var method = "POST";
+		var params = '{"' + op + '":"' + sch + '"}';
+		var conf = {url:url,
+				method:method,
+				params:params,
+				success:search
+				};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+		
+		function search(res){
+			showList(res);
+		}
+	}
+
 	
 	function allChk(e){
 		document.querySelectorAll("input[name=chk]").forEach((d) => {

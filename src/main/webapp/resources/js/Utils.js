@@ -36,7 +36,7 @@ var getInfoList = function(list){
 }
 
 var getView = function(list){
-	var html = '<table border="1">';
+	var html = '<table class="table table-bordered table-hover">';
 	
 	for(var k in list[0]){
 		html += '<tr>';
@@ -44,14 +44,14 @@ var getView = function(list){
 		html += '</tr>';
 	}
 	
-	html += '<tr><td><button onclick="modify(' + list[0]["cino"] + ')" type="button">수정</button></td></tr>';
+	html += '<tr><td colspan="2"><button onclick="modify(' + list[0]["cino"] + ')" type="button">수정</button></td></tr>';
 	html += '</table>';
 	
 	return html;
 }
 
 var getModify = function(list){
-	var html = '<table border="1">';
+	var html = '<table class="table table-bordered table-hover">';
 	
 	for(var k in list[0]){
 		html += '<tr>';
@@ -62,7 +62,7 @@ var getModify = function(list){
 		}
 		html += '</tr>';
 	}
-	html += '<tr><td><button onclick="updateInfo()" type="button">수정완료</button></td></tr>';
+	html += '<tr><td colspan="2"><button onclick="updateInfo()" type="button">수정완료</button></td></tr>';
 	html += '</table>';
 	
 	return html;

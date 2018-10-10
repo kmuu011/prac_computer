@@ -9,12 +9,18 @@
 
 	<select id="selectComputerInfoList" resultType="ci" parameterType="ci">
 		select * from computer_info
-		<if test="cino!=null">
-			where cino = #{cino}
-		</if>
-		<if test="ciname!=null">
-			where ciname like '%' || #{ciname} || '%'
-		</if>
+		<if test="cino!=null">	where cino = #{cino}</if>
+		
+		<if test="ciname!=null">where ciname like '%' || #{ciname} || '%'</if>
+		<if test="cipower!=null">where cipower like '%' || #{cipower} || '%'</if>
+		<if test="cimb!=null">where cimb like '%' || #{cimb} || '%'</if>
+		<if test="cicpu!=null">where cicpu like '%' || #{cicpu} || '%'</if>
+		<if test="ciram!=null">where ciram like '%' || #{ciram} || '%'</if>
+		<if test="civga!=null">where civga like '%' || #{civga} || '%'</if>
+		<if test="cihdd!=null">where cihdd like '%' || #{cihdd} || '%'</if>
+		<if test="cissd!=null">where cissd like '%' || #{cissd} || '%'</if>
+		<if test="cicase!=null">where cicase like '%' || #{cicase} || '%'</if>
+		<if test="ciodd!=null">where ciodd like '%' || #{ciodd} || '%'</if>
 		
 		order by cino desc
 	</select>

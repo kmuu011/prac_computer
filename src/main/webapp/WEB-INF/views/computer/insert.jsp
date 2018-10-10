@@ -8,7 +8,7 @@
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
-<form id="form" method="POST"  action="/computerinfo" enctype="multipart/form-data">
+<form id="insertform" method="POST"  action="/computerinfo" enctype="multipart/form-data">
 
 </form>
 
@@ -24,16 +24,18 @@ window.addEventListener('load', function(){
 	
 	function success(res){
 		res = JSON.parse(res);
-		var html = '';
+		var html = '<table class="table table-bordered table-hover">';
 		
 		for(var k in res){
+			html += '<tr>';
 			if(k.indexOf('cino') == -1){
-				html += k.substring(k.indexOf('i')+1) + ' : <input type="text" name="' + k  + '"><br>';
+				html += '<th>' + k.substring(k.indexOf('i')+1) + '</th><td><input type="text" name="' + k  + '"></td>';
 			}
+			html += '</tr>';
 		}
-		html += '<button type="button" onclick="insert()" class="btn btn-secondary">등ㅋ록</button>'
-		
-		document.querySelector('#form').innerHTML = html;
+		html += '<tr><td colspan="2"><button type="button" onclick="insert()" class="btn btn-secondary">등ㅋ록</button></td></tr>';
+		html +='</table>';
+		document.querySelector('#insertform').innerHTML = html;
 	}
 	
 	var au = new AjaxUtil(conf);

@@ -8,7 +8,7 @@
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
-<form id="form" enctype="multipart/form-data">
+<form enctype="multipart/form-data">
 	T : <input type="text"  name="tname"><br>
 	<input type="file" name="tfile"><br>
 <button type="button">읭</button>
