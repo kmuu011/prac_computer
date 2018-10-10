@@ -9,11 +9,11 @@
 </head>
 <body>
 <form id="form">
-<div class="form-group col-md-6">
+<div class="form row">
+<div class="col-7">
 <input type="text"  class="form-control"  id="sch" placeholder="최소 2자이상 입력가능" readonly>
 </div>
-<div class="form-row align-items-center">
-    <div class="col-auto my-1">
+<div class="col">
 <select class="custom-select mr-sm-2"  id="op">
 <option selected>선택</option>
 	<option value="ciname">이름</option>
