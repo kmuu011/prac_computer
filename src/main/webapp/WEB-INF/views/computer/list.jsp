@@ -13,10 +13,7 @@
 <form id="form">
 <div class="form row">
 <div class="col-7">
-<input type="text"  class="form-control"  id="sch" placeholder="최소 2자이상 입력가능" readonly>
-</div>
-<div class="col">
-<select class="custom-select mr-sm-2"  id="op">
+<select class="custom-select mr-sm-2"  id="op"  required>
 <option selected>선택</option>
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
@@ -29,6 +26,11 @@
 	<option value="ciodd">ODD</option>
 	<option value="cicase">CASE</option>
 </select>
+<div class="invalid-feedback">항목을 선택해야합니다.</div>
+</div>
+<div class="col">
+<input type="text"  class="form-control"  id="sch" placeholder="검색어 입력"  required>
+<div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
 </div>
 
