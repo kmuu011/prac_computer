@@ -9,10 +9,13 @@
 </head>
 <body>
 <form id="form">
-<div class="form-group mx-sm-3 mb-2">
+<div class="form-group col-md-6">
 <input type="text"  class="form-control"  id="sch" placeholder="최소 2자이상 입력가능" readonly>
 </div>
-<select  id="op">
+<div class="form-row align-items-center">
+    <div class="col-auto my-1">
+<select class="custom-select mr-sm-2"  id="op">
+<option selected>선택</option>
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
 	<option value="cipower">Power</option>
@@ -24,6 +27,9 @@
 	<option value="ciodd">ODD</option>
 	<option value="cicase">CASE</option>
 </select>
+</div>
+</div>
+
 
 <button type="button" class="btn btn-secondary">검색</button><br><br>
 

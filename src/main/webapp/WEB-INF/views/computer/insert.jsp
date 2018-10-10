@@ -8,7 +8,7 @@
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
-<form id="form" method="POST" action="/computerinfo" enctype="multipart/form-data">
+<form id="form" method="POST"  action="/computerinfo" enctype="multipart/form-data">
 
 </form>
 
@@ -31,7 +31,7 @@ window.addEventListener('load', function(){
 				html += k.substring(k.indexOf('i')+1) + ' : <input type="text" name="' + k  + '"><br>';
 			}
 		}
-		html += '<button type="button" onclick="insert()">등ㅋ록</button>'
+		html += '<button type="button" onclick="insert()" class="btn btn-secondary">등ㅋ록</button>'
 		
 		document.querySelector('#form').innerHTML = html;
 	}
