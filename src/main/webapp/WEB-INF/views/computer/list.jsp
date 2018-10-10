@@ -10,8 +10,8 @@
 <body>
 <form id="form">
 
-<input type="text" id="sch">
-<select multiple class="form-control"  id="op">
+<input type="text" id="sch" placeholder="검색">
+<select  id="op">
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
 	<option value="cipower">Power</option>
