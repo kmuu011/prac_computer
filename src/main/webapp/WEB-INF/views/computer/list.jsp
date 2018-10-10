@@ -73,7 +73,7 @@
 				var params = JSON.stringify(list);
 				alert(params)
 				var conf = {url:url,
-						method:"POST",
+						method:method,
 						params:params};
 				
 				var au = new AjaxUtil(conf);
