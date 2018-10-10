@@ -38,7 +38,6 @@ var getInfoList = function(list){
 var getView = function(list){
 	var html = '<table border="1">';
 	
-	
 	for(var k in list[0]){
 		html += '<tr>';
 		html += '<th>' + k + '</th><td>' + list[0][k] + '</td>';
