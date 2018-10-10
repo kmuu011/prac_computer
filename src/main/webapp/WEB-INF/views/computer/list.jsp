@@ -10,7 +10,8 @@
 <body>
 <form id="form">
 <div class="form-group">
-<input type="text"  class="form-control"  id="sch" placeholder="검색">
+<input type="text"  class="form-control"  id="sch" placeholder="최소 2자이상 입력가능">
+</div>
 <select  id="op">
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
@@ -23,7 +24,6 @@
 	<option value="ciodd">ODD</option>
 	<option value="cicase">CASE</option>
 </select>
-</div>
 
 <button type="button" class="btn btn-secondary">검색</button><br><br>
 
