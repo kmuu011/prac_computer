@@ -37,7 +37,7 @@
 
 <button type="button" class="btn btn-secondary">검색</button><br><br>
 
-	<table  class="table table-bordered table-hover">
+	<table  class="table table-bordered table-hover"  style="cursor:pointer" >
 	
 		<thead  id="tHead">
 
