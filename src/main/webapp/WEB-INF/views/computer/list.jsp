@@ -9,8 +9,8 @@
 </head>
 <body>
 <form id="form">
-<div class="form-group">
-<input type="text"  class="form-control"  id="sch" placeholder="최소 2자이상 입력가능">
+<div class="form-group mx-sm-3 mb-2">
+<input type="text"  class="form-control"  id="sch" placeholder="최소 2자이상 입력가능" readonly>
 </div>
 <select  id="op">
 	<option value="ciname">이름</option>
