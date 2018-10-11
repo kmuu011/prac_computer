@@ -8,9 +8,9 @@ var formDataToJson = function(formData){
 
 var getMetaData = function(e){
 	var head = '<tr>';
-	head+='<td><input type="checkbox" onclick="allChk(this)" style="cursor:pointer"></td>';
+	head+='<th><input type="checkbox" onclick="allChk(this)" style="cursor:pointer"></th>';
 	for(var k in e){
-		head += '<td>' + k + '</td>';
+		head += '<th>' + k + '</th>';
 	}
 	
 	head += '</tr>';
