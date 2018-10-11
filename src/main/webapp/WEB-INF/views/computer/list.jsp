@@ -34,7 +34,8 @@
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
 <button type="button" onclick="search()" class="btn btn-secondary">검색</button>
-</div>
+</div><br>
+
 	<div class="form row">
 	<table  class="table table-bordered table-hover">	
 	
