@@ -1,0 +1,22 @@
+
+#form{
+	margin: 100px;
+}
+
+#form #viewtable{
+	width:500px;
+	margin: 100px;
+}
+
+#viewtable input{
+	width:300px;
+}
+
+#insertform{
+	margin: 100px 500px;
+}
+
+#insertform input{
+	width: 300px;
+}
+

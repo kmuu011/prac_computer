@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<form id="form">
+<form id="form" onsubmit="return false;">
 <div class="form row">
 <div class="col-4">
 <select  id="op"  class="custom-select mr-sm-2"  required>
@@ -27,19 +27,39 @@
 </select>
 <div class="invalid-feedback">항목을 선택해야합니다.</div>
 </div>
+<<<<<<< HEAD
 <div class="col-3">
 <input type="text"  class="form-control"  id="sch" placeholder="검색어 입력"  required>
+=======
+<div class="col">
+<input type="text"  class="form-control"  id="sch" placeholder="검색어 입력" onkeypress="if(event.keyCode==13){search();}" required>
+>>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
 <button type="button" class="btn btn-secondary">검색</button>
 </div>
+<<<<<<< HEAD
 	<div class="form row">
 	<table  class="table table-bordered table-hover"  style="cursor:pointer" >	
+=======
+</div>
+
+
+<button type="button" onclick="search()" class="btn btn-secondary">검색</button><br><br>
+
+	<table class="table table-bordered table-hover">
+>>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
 	
 		<thead  class="thead-dark" id="tHead"  >
 		</thead>
+<<<<<<< HEAD
 
 		<tbody id="tBody">		
+=======
+		
+		<tbody id="tBody" style="cursor:pointer">
+		
+>>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
 		</tbody>
 		
 	</table>
@@ -112,28 +132,33 @@
 				}
 				
 			}else if(this.innerHTML=='검색'){
-				var op = document.querySelector("#op").value;
-				var sch = document.querySelector("#sch").value;
-				
-				var url = "/computerSearch";
-				var method = "POST";
-				var params = '{"' + op + '":"' + sch + '"}';
-				var conf = {url:url,
-						method:method,
-						params:params,
-						success:search
-						};
-				
-				var au = new AjaxUtil(conf);
-				au.send();
-				
-				function search(res){
-					showList(res);
-				}
+				search();
 				
 			}
 		}
 	});
+	
+	function search(){
+		var op = document.querySelector("#op").value;
+		var sch = document.querySelector("#sch").value;
+		
+		var url = "/computerSearch";
+		var method = "POST";
+		var params = '{"' + op + '":"' + sch + '"}';
+		var conf = {url:url,
+				method:method,
+				params:params,
+				success:search
+				};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+		
+		function search(res){
+			showList(res);
+		}
+	}
+
 	
 	function allChk(e){
 		document.querySelectorAll("input[name=chk]").forEach((d) => {
