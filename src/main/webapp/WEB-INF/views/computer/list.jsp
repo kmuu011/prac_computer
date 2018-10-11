@@ -11,7 +11,7 @@
 <body>
 <form id="form" onsubmit="return false;">
 <div class="form row">
-<div class="col-4">
+<div class="col-3">
 <select  id="op"  class="custom-select mr-sm-2"  required>
 <option selected>선택</option>
 	<option value="ciname">이름</option>
@@ -28,7 +28,7 @@
 <div class="invalid-feedback">항목을 선택해야합니다.</div>
 </div>
 
-<div class="col-3">
+<div class="col-2">
 <input type="text"  class="form-control"  id="sch" placeholder="검색어 입력" onkeypress="if(event.keyCode==13){search();}" required>
 
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
