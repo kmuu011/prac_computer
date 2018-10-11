@@ -9,6 +9,10 @@
 </head>
 
 <body>
+<jsp:include page="/WEB-INF/views/nav/topnav.jsp"/>
+
+
+
 <form id="form"  onsubmit="return false;">
 <div class="form row">
 <div class="col-3">
@@ -95,6 +99,11 @@
 				document.querySelectorAll("input[name=chk]:checked").forEach((e) =>{
 					list.push(e.value);
 				});
+
+				if(list.length == 0){
+					alert('삭제할 정보를 체크해주세요.');
+					return;
+				}
 				
 				var url = "/computerinfoD";
 				var method = "POST";

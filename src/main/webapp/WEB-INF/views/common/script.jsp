@@ -2,7 +2,7 @@
 <script src="/rsc/js/Utils.js?ver=0.9"></script>
 
 <link href="/rsc/vendor/bootstrap/css/bootstrap.css?ver=0.1" rel="stylesheet">
-<link href="/rsc/css/hikari.css?ver=0.8" rel="stylesheet">
+<link href="/rsc/css/hikari.css?ver=0.9" rel="stylesheet">
 
 <script src="/rsc/vendor/jquery/jquery.min.js?ver=0.1"></script>
 <script src="/rsc/vendor/bootstrap/js/bootstrap.bundle.min.js?ver=0.1"></script>

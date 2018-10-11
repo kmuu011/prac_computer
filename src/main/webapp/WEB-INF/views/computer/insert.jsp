@@ -8,6 +8,8 @@
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/nav/topnav.jsp"/>
+
 <form id="insertform" method="POST"  action="/computerinfo" enctype="multipart/form-data">
 
 </form>
