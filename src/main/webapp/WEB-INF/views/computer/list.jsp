@@ -27,39 +27,23 @@
 </select>
 <div class="invalid-feedback">항목을 선택해야합니다.</div>
 </div>
-<<<<<<< HEAD
+
 <div class="col-3">
-<input type="text"  class="form-control"  id="sch" placeholder="검색어 입력"  required>
-=======
-<div class="col">
 <input type="text"  class="form-control"  id="sch" placeholder="검색어 입력" onkeypress="if(event.keyCode==13){search();}" required>
->>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
+
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
-<button type="button" class="btn btn-secondary">검색</button>
+<button type="button" onclick="search()" class="btn btn-secondary">검색</button>
 </div>
-<<<<<<< HEAD
 	<div class="form row">
-	<table  class="table table-bordered table-hover"  style="cursor:pointer" >	
-=======
-</div>
-
-
-<button type="button" onclick="search()" class="btn btn-secondary">검색</button><br><br>
-
-	<table class="table table-bordered table-hover">
->>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
+	<table  class="table table-bordered table-hover">	
 	
 		<thead  class="thead-dark" id="tHead"  >
 		</thead>
-<<<<<<< HEAD
 
-		<tbody id="tBody">		
-=======
 		
 		<tbody id="tBody" style="cursor:pointer">
 		
->>>>>>> branch 'master' of https://github.com/kmuu011/prac_computer.git
 		</tbody>
 		
 	</table>
