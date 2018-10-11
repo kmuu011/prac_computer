@@ -8,7 +8,7 @@ var formDataToJson = function(formData){
 
 var getMetaData = function(e){
 	var head = '<tr>';
-	head+='<td><input type="checkbox" onclick="allChk(this)"></td>';
+	head+='<td><input type="checkbox" onclick="allChk(this)" style="cursor:pointer"></td>';
 	for(var k in e){
 		head += '<td>' + k + '</td>';
 	}
@@ -23,7 +23,7 @@ var getInfoList = function(list){
 	
 	list.forEach((e) => {
 		body += '<tr>';
-		body += '<td><input type="checkbox" name="chk" value="' + e["cino"] + '"></td>';
+		body += '<td><input type="checkbox" name="chk" value="' + e["cino"] + '" style="cursor:pointer"></td>';
 		
 		for(var k in e){
 			body += '<td onclick="ciView(' + e["cino"] + ')">' + e[k] + '</td>';
