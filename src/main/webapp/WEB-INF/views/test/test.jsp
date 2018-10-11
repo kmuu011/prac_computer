@@ -9,7 +9,7 @@
 </head>
 <body>
 <form enctype="multipart/form-data">
-	T : <input type="text"  name="tname"><br>
+	T : <input type="text"  name="tname" maxlength="33" required><br>
 	<input type="file" name="tfile"><br>
 <button type="button">읭</button>
 

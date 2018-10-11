@@ -29,11 +29,11 @@ window.addEventListener('load', function(){
 		for(var k in res){
 			html += '<tr>';
 			if(k.indexOf('cino') == -1){
-				html += '<th>' + k.substring(k.indexOf('i')+1) + '</th><td><input type="text" name="' + k  + '"></td>';
+				html += '<th>' + k.substring(k.indexOf('i')+1) + '</th><td><input type="text" name="' + k  + '" maxlength="33" required></td>';
 			}
 			html += '</tr>';
 		}
-		html += '<tr><td colspan="2"><button type="button" onclick="insert()" class="btn btn-secondary">등ㅋ록</button></td></tr>';
+		html += '<tr><td colspan="2"><button type="submit" onclick="insert()" class="btn btn-secondary">등ㅋ록</button></td></tr>';
 		html +='</table>';
 		document.querySelector('#insertform').innerHTML = html;
 	}
