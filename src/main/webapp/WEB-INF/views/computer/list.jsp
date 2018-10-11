@@ -38,7 +38,7 @@
 	<div class="form row">
 	<table  class="table table-bordered table-hover">	
 	
-		<thead  class="thead-dark" id="tHead"  >
+		<thead  class="thead-dark"  id="tHead"  >
 		</thead>
 
 		
@@ -81,7 +81,6 @@
 			
 			document.querySelector('#tBody').innerHTML = getInfoList(res);
 		}
-
 	}
 	
 	var btns = document.querySelectorAll("button");
@@ -142,7 +141,6 @@
 			showList(res);
 		}
 	}
-
 	
 	function allChk(e){
 		document.querySelectorAll("input[name=chk]").forEach((d) => {
@@ -150,7 +148,6 @@
 		});
 	}
 	
-
 	function ciView(cino){
 		var url = "/computerinfo/" + cino;
 		var conf = {url:url,
@@ -171,7 +168,6 @@
 		
 		var au = new AjaxUtil(conf);
 		au.send();
-
 		function updateView(res){
 			document.querySelector('#form').innerHTML = getModify(JSON.parse(res));
 		}
@@ -197,7 +193,6 @@
 		var au = new AjaxUtil(conf);
 		au.send();
 	}
-
 </script>
 
 </body>
