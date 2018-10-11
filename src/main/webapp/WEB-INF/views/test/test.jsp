@@ -17,7 +17,7 @@
 <button type="button" name="up" class="btn btn-outline-primary">읭</button>
 
 </form>
-<img src="/rsc/upload\2c03f9e3b51709304e695af0b27762da.jpg" height="200px">
+<img src="/rsc/upload\Piano 2.jpg" height="200px">
 
 <script>
 
