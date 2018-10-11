@@ -67,3 +67,26 @@ var getModify = function(list){
 	
 	return html;
 };
+ 
+function checkValues(values){
+	
+	for(var e of values){
+		
+		if(!e.value.trim()){
+			alert(e.getAttribute('name').substring(2) + '을 입력해주세요. 모르면 "모름" 이라적으세요.')
+			e.value='';
+			e.focus();
+			return false;
+		}
+		
+	}
+	return true;
+	
+}
+
+
+
+
+
+
+

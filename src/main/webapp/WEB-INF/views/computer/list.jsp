@@ -175,6 +175,8 @@
 	}
 	
 	function updateInfo(){
+		if(!checkValues(document.querySelectorAll("input"))) return;
+
 		var form = document.querySelector("form");
 		var formData = new FormData(form);
 		

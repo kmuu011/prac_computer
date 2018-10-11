@@ -33,7 +33,7 @@ window.addEventListener('load', function(){
 			}
 			html += '</tr>';
 		}
-		html += '<tr><td colspan="2"><button type="submit" onclick="insert()" class="btn btn-secondary">등ㅋ록</button></td></tr>';
+		html += '<tr><td colspan="2"><button type="button" onclick="insert()" class="btn btn-secondary">등ㅋ록</button></td></tr>';
 		html +='</table>';
 		document.querySelector('#insertform').innerHTML = html;
 	}
@@ -44,6 +44,9 @@ window.addEventListener('load', function(){
 });
 
 function insert(){
+	if(!checkValues(document.querySelectorAll("input"))) return;
+	
+	
 	var form = document.querySelector("form");
 	var formData = new FormData(form);
 	
@@ -63,6 +66,7 @@ function insert(){
 	var au = new AjaxUtil(conf);
 	au.send();
 }
+
 
 
 	
