@@ -44,7 +44,7 @@ var getView = function(list){
 		html += '</tr>';
 	}
 	
-	html += '<tr><td colspan="2"><button onclick="modify(' + list[0]["cino"] + ')" type="button" class="btn btn-secondary">수정</button></td></tr>';
+	html += '<tr><td colspan="2"><button class="btn btn-secondary" onclick="modify(' + list[0]["cino"] + ')" type="button">수정</button></td></tr>';
 	html += '</table>';
 	
 	return html;
@@ -62,7 +62,7 @@ var getModify = function(list){
 		}
 		html += '</tr>';
 	}
-	html += '<tr><td colspan="2"><button onclick="updateInfo()" type="button" class="btn btn-secondary">수정완료</button></td></tr>';
+	html += '<tr><td colspan="2"><button class="btn btn-secondary" onclick="updateInfo()" type="button">수정완료</button></td></tr>';
 	html += '</table>';
 	
 	return html;
