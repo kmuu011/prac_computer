@@ -26,7 +26,7 @@ window.addEventListener('load', function(){
 	
 	function success(res){
 		res = JSON.parse(res);
-		var html = '<table class="table table-bordered table-hover">';
+		var html = '<table class="table table-hover">';
 		
 		for(var k in res){
 			html += '<tr>';
@@ -35,7 +35,7 @@ window.addEventListener('load', function(){
 			}
 			html += '</tr>';
 		}
-		html += '<tr><td colspan="2"><button type="button" onclick="insert()" class="btn btn-secondary">등ㅋ록</button></td></tr>';
+		html += '<tr><td colspan="2"><button type="button" onclick="insert()" class="btn btn-outline-primary">등ㅋ록</button></td></tr>';
 		html +='</table>';
 		document.querySelector('#insertform').innerHTML = html;
 	}
@@ -47,7 +47,6 @@ window.addEventListener('load', function(){
 
 function insert(){
 	if(!checkValues(document.querySelectorAll("input"))) return;
-	
 	
 	var form = document.querySelector("form");
 	var formData = new FormData(form);

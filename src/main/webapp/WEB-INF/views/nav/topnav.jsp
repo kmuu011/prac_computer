@@ -22,7 +22,7 @@
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="/uri/test:test">파일 업로드 테스트</a>
         </div>
       </li>
       <li class="nav-item">

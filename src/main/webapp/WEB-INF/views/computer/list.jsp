@@ -35,11 +35,11 @@
 <input type="text"  class="form-control"  id="sch" placeholder="검색어 입력" onkeypress="if(event.keyCode==13){search();}" required>
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
-<button type="button" onclick="search()" class="btn btn-secondary">검색</button>
+<button type="button" onclick="search()" class="btn btn-outline-primary">검색</button>
 </div><br>
 
 	<div class="form row">
-	<table  class="table table-bordered table-hover">	
+	<table  class="table table-hover">	
 	
 		<thead  class="thead-dark"  id="tHead"  >
 		</thead>
@@ -52,8 +52,8 @@
 	</table>
 </div>
 
-	<button type="button" class="btn btn-secondary">등록</button>
-	<button type="button" class="btn btn-secondary">삭제</button>
+	<button type="button" class="btn btn-outline-primary">등록</button>
+	<button type="button" class="btn btn-outline-primary">삭제</button>
 </form>
 
 <script>
@@ -101,7 +101,7 @@
 				});
 
 				if(list.length == 0){
-					alert('삭제할 정보를 체크해주세요.');
+					alert('삭제할 항목를 체크해주세요.');
 					return;
 				}
 				
