@@ -7,13 +7,12 @@
 <title>Insert title here</title>
 <jsp:include page="/WEB-INF/views/common/script.jsp"/>
 </head>
-<style="cursor:pointer">
-</style>
+
 <body>
 <form id="form">
 <div class="form row">
-<div class="col-7">
-<select class="custom-select mr-sm-2"  id="op"  required>
+<div class="col-4">
+<select  id="op"  class="custom-select mr-sm-2"  required>
 <option selected>선택</option>
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
@@ -28,31 +27,26 @@
 </select>
 <div class="invalid-feedback">항목을 선택해야합니다.</div>
 </div>
-<div class="col">
+<div class="col-3">
 <input type="text"  class="form-control"  id="sch" placeholder="검색어 입력"  required>
 <div class="invalid-feedback">최소 2자이상 입력가능</div>
 </div>
+<button type="button" class="btn btn-secondary">검색</button>
 </div>
-
-
-<button type="button" class="btn btn-secondary">검색</button><br><br>
-
-	<table  class="table table-bordered table-hover"  style="cursor:pointer" >
+	<div class="form row">
+	<table  class="table table-bordered table-hover"  style="cursor:pointer" >	
 	
-		<thead  id="tHead">
-
+		<thead  class="thead-dark" id="tHead"  >
 		</thead>
-		
-		<tbody id="tBody">
-		
+
+		<tbody id="tBody">		
 		</tbody>
 		
 	</table>
-
+</div>
 
 	<button type="button" class="btn btn-secondary">등록</button>
 	<button type="button" class="btn btn-secondary">삭제</button>
-
 </form>
 
 <script>
