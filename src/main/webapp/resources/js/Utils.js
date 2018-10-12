@@ -80,9 +80,7 @@ function checkValues(values){
 	return true;	
 }
 
-function checkDelete(){
-	
-}
+
 
 
 

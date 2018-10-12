@@ -20,14 +20,14 @@
 <option selected>선택</option>
 	<option value="ciname">이름</option>
 	<option value="cicpu">CPU</option>
-	<option value="cipower">Power</option>
-	<option value="cimb">Mainboard</option>
+	<option value="cipower">파워</option>
+	<option value="cimb">메인보드</option>
 	<option value="ciram">RAM</option>
 	<option value="civga">VGA</option>
 	<option value="cihdd">HDD</option>
 	<option value="cissd">SSD</option>
 	<option value="ciodd">ODD</option>
-	<option value="cicase">CASE</option>
+	<option value="cicase">케이스</option>
 </select>
 <div class="invalid-feedback">항목을 선택해야합니다.</div>
 </div>
@@ -41,7 +41,8 @@
 	<div class="form row">
 	<table  class="table table-hover">	
 	
-		<thead  class="thead-dark"  id="tHead"  >
+		<thead  class="thead-dark"  id="tHead" >
+		
 		</thead>
 
 		
@@ -132,6 +133,16 @@
 	function search(){
 		var op = document.querySelector("#op").value;
 		var sch = document.querySelector("#sch").value;
+		
+		if(op == '선택'){
+			alert('검색 옵션을 선택하세요.');
+			return;
+		}
+		
+		if(sch.trim() ==""){
+			alert('검색어를 입력해주세요')
+			return;
+		}
 		
 		var url = "/computerSearch";
 		var method = "POST";
