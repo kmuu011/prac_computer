@@ -28,7 +28,7 @@
 	<insert id="insertComputerInfo" parameterType="ci">
 		insert into computer_info values
 		(seq_computer.nextval, #{ciname}, #{cipower}, #{cicpu},
-		#{cimb}, #{ciram}, #{civga}, #{cihdd}, #{cissd}, #{ciodd}, #{cicase})
+		#{cimb}, #{ciram}, #{civga}, #{cihdd}, #{cissd}, #{ciodd}, #{cicase}, #{ciimg})
 	</insert>
 	
 	<delete id="deleteComputerInfo" parameterType="Integer">
@@ -48,7 +48,20 @@
 		<if test="cissd!=null">cissd = #{cissd},</if>
 		<if test="ciodd!=null">ciodd = #{ciodd},</if>
 		<if test="cicase!=null">cicase = #{cicase},</if>
+		<if test="ciimg!=null">ciimg = #{ciimg}</if>
 	</set>
-	where cino=${cino}
+	where cino=#{cino}
 	</update>
+	
+	<select id="selectImg" resultType="String" parameterType="ci">
+		select ciimg from computer_info
+		where cino = #{cino}
+	</select>
+	
+	<select id="selectRecent" resultType="ci">
+		select ci.*, rownum from 
+		(select * from COMPUTER_INFO order by cino desc) ci 
+		where rownum &gt;= 1 and rownum &lt;= 2
+	</select>
+	
 </mapper>

@@ -13,4 +13,8 @@ public interface ComputerService {
 	public Integer getDeleteResult(List<Integer> deleteNo);
 	
 	public Integer getUpdateResult(ComputerInfo ci);
+	
+	public List<ComputerInfo> getRecent();
+	
+	
 }

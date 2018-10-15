@@ -14,5 +14,12 @@ public interface ComputerDAO {
 	
 	public Integer updateComputerInfo(ComputerInfo ci);
 	
+	public String selectImg(ComputerInfo ci);
+	
+	public List<ComputerInfo> selectRecent();
+
+	
+
+	
 
 }

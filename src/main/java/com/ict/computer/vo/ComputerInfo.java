@@ -16,6 +16,7 @@ public class ComputerInfo {
 	private String cissd;
 	private String ciodd;
 	private String cicase;
+	private String ciimg;
 	
 	
 	public ComputerInfo() {	}
@@ -86,12 +87,24 @@ public class ComputerInfo {
 	public void setCicase(String cicase) {
 		this.cicase = cicase;
 	}
+
+	public String getCiimg() {
+		return ciimg;
+	}
+
+	public void setCiimg(String ciimg) {
+		this.ciimg = ciimg;
+	}
+
 	@Override
 	public String toString() {
 		return "ComputerInfo [cino=" + cino + ", ciname=" + ciname + ", cipower=" + cipower + ", cicpu=" + cicpu
 				+ ", cimb=" + cimb + ", ciram=" + ciram + ", civga=" + civga + ", cihdd=" + cihdd + ", cissd=" + cissd
-				+ ", ciodd=" + ciodd + ", cicase=" + cicase + "]";
+				+ ", ciodd=" + ciodd + ", cicase=" + cicase + ", ciimg=" + ciimg + "]";
 	}
+	
+	
+	
 	
 	
 

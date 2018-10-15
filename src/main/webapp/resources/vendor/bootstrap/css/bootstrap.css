@@ -848,17 +848,18 @@ pre code {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
+    margin-top:1%;
   }
   .col-sm-3 {
     -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 300px;
+    max-width: 300px;
   }
   .col-sm-4 {
     -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    flex: 1%;
   }
+
   .col-sm-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;

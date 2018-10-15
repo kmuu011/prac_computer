@@ -1,3 +1,178 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+/* 기본 */
+ #mainNav {
+  background-color: #fff;
+  font-family: sans-serif, "맑은 고딕", serif;
+}
+	
+/* 기본 토글 */
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  background-color: #fff;
+  font-family: sans-serif, "맑은 고딕", serif;
+}
+
+/* 기본 메인 글씨 */
+#mainNav .navbar-brand {
+  color: #6f42c1;
+  font-family: 'Righteous', cursive, serif;
+  font-weight: 550;
+}
+
+/* 기본 메인 글씨 마우스 오버 */
+#mainNav .navbar-brand.active, 
+#mainNav .navbar-brand:active, 
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #6f42c1;
+}
+
+/*기본  메인 부메뉴*/
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 90%;
+  font-weight: 400;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  color: #000000;
+  font-family: 'Noto Sans KR', sans-serif, serif;
+  font-weight: 500;
+}
+
+/* 확장시 메뉴 마우스 오버 */
+#mainNav .navbar-nav .nav-item .nav-link.active, 
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #6f42c1;
+}
+
+/*확장시*/
+@media (min-width: 700px) {
+  #mainNav {
+	border-color:transparent;
+	background-color:transparent;
+
+  }
+  #mainNav .navbar-brand {
+    color:#fff;
+	/* color:rgba(255,255,255,.7); */
+    font-size: 1.75em;
+  }
+  
+ #mainNav .navbar-brand:focus,
+ #mainNav .navbar-brand:hover{
+	color:#6f42c1
+	}
+	
+#mainNav .navbar-nav>li.nav-item>a.nav-link,
+#mainNav .navbar-nav>li.nav-item>a.nav-link:focus{
+	color:#fff
+	/* color:rgba(255,255,255,.7); */
+}
+	
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  
+  #mainNav.navbar-shrink {
+    background-color: #ffffffa3;
+  }
+  
+  #mainNav.navbar-shrink .navbar-brand{
+  color:#6f42c1
+  }
+  #mainNav.navbar-shrink .navbar-brand:focus,
+  #mainNav.navbar-shrink .navbar-brand:hover{
+  color:#6f42c1
+  }
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{
+  color:#000000
+  }
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{
+  color:#6f42c1
+  }
+}
+
+#form1 img {
+	object-fit: none;
+    object-position:  20%  60%;
+    height:400px;
+    
+}
+
+#form2{
+	margin-right:12%;
+	margin-left: 12%;
+	margin-top: 3%;
+}
+
+#form3{
+	margin-right:12%;
+	margin-left: 12%;
+	margin-top: 3%;
+}
+
+#form4{
+	margin-right:12%;
+	margin-left: 12%;
+	margin-top: 3%;
+}
+
+#form #viewtable{
+	margin: 0% 22%;
+	width:800px;
+}
+
+#viewtable input{
+	width:300px;
+}
+
+#insertform{
+	margin: 3% 27%;
+}
+
+#insertform input{
+	width: 500px;
+}
+
+/*부제*/
+ .heading-large {
+ border-bottom: 2px solid #222; 
+ color: #222; float: left; width: 100%; 
+ padding:0 0 6px; 
+ margin:0 0 18px; 
+ text-align: left;
+ }
+
+#footer{
+    text-align: center;
+    margin-bottom:17px;
+    font-size:11px; 
+    color:#666;
+    line-height:16px;
+}
+
+#footer a {
+    color: #666;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer a:hover {
+	font-weight:800;
+}
+	
+
+	
+	
+	
 
 #form{
 	margin: 2% 10%;
@@ -22,5 +197,35 @@
 
 a .nav-link{
 	font-color:#9933cc;
+}
+
+.item_img{
+	cursor:pointer;
+	height:200px;
+	width:auto;
+}
+
+.item_detail{
+	cursor:pointer;	
+}
+
+.view_img{
+	cursor:pointer;
+	height:400px;
+}
+
+.view_big_img{
+	cursor:pointer;
+	height:800px;
+}
+
+.non_img{
+	height:250px;
+}
+
+input.dropdown-item.del {
+    margin-left: -44%;
+    margin-top: -22px;
+    margin-bottom: 10px;
 }
 

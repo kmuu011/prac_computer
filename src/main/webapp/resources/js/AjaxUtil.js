@@ -2,8 +2,7 @@
 var AjaxUtil = function(conf){
 	var url = conf.url;
 	var method = conf.method?conf.method:'GET';
-	var params = conf.params?conf.params:'';
-	
+	var params = conf.formData?conf.formData:conf.params?conf.params:'';
 	
 	var comFail = function(res){
 		alert(res);
@@ -34,7 +33,7 @@ var AjaxUtil = function(conf){
 	this.send = function(){
 		xhr.open(method,url);
 		
-		if(method != 'GET'){
+		if(method != 'GET' && !conf.formData){
 			xhr.setRequestHeader('Content-type','application/json;charset=utf-8');
 		}
 		
