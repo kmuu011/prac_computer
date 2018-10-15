@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 
-/* 湲곕낯 */
+/* 기본 */
  #mainNav {
   background-color: #fff;
-  font-family: sans-serif, "留묒� 怨좊뵓", serif;
+  font-family: sans-serif, "맑은 고딕", serif;
 }
 	
-/* 湲곕낯 �넗湲� */
+/* 기본 토글 */
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
@@ -17,24 +17,24 @@
   color: white;
   border: 0;
   background-color: #fff;
-  font-family: sans-serif, "留묒� 怨좊뵓", serif;
+  font-family: sans-serif, "맑은 고딕", serif;
 }
 
-/* 湲곕낯 硫붿씤 湲��뵪 */
+/* 기본 메인 글씨 */
 #mainNav .navbar-brand {
   color: #6f42c1;
   font-family: 'Righteous', cursive, serif;
   font-weight: 550;
 }
 
-/* 湲곕낯 硫붿씤 湲��뵪 留덉슦�뒪 �삤踰� */
+/* 기본 메인 글씨 마우스 오버 */
 #mainNav .navbar-brand.active, 
 #mainNav .navbar-brand:active, 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #6f42c1;
 }
 
-/*湲곕낯  硫붿씤 遺�硫붾돱*/
+/*기본  메인 부메뉴*/
 #mainNav .navbar-nav .nav-item .nav-link {
   font-size: 90%;
   font-weight: 400;
@@ -45,13 +45,13 @@
   font-weight: 500;
 }
 
-/* �솗�옣�떆 硫붾돱 留덉슦�뒪 �삤踰� */
+/* 확장시 메뉴 마우스 오버 */
 #mainNav .navbar-nav .nav-item .nav-link.active, 
 #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #6f42c1;
 }
 
-/*�솗�옣�떆*/
+/*확장시*/
 @media (min-width: 700px) {
   #mainNav {
 	border-color:transparent;

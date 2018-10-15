@@ -50,13 +50,7 @@ public class ComputerServlet {
 		ci.setCino(cino);
 		return cs.getComputerInfoList(ci);
 	}
-	
-	@RequestMapping(value="/computerinfo", method=RequestMethod.POST)
-	@ResponseBody
-	public Integer computerInfoInsert(@RequestBody ComputerInfo ci){
-		System.out.println(ci);
-		return cs.getInsertResult(ci);
-	}
+
 	
 	@RequestMapping(value="/computerinfoD", method=RequestMethod.POST)
 	@ResponseBody
@@ -71,14 +65,6 @@ public class ComputerServlet {
 	public List<ComputerInfo> searchComputerInfo(@RequestBody ComputerInfo ci){
 			System.out.println(ci);
 		return cs.getComputerInfoList(ci);
-	}
-	
-	@RequestMapping(value="/computerinfo", method=RequestMethod.PUT)
-	@ResponseBody
-	public Integer updateComputerInfo(@RequestBody ComputerInfo ci) {
-		
-		System.out.println(ci);
-		return cs.getUpdateResult(ci);
 	}
 	
 	

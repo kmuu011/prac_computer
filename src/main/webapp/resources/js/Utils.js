@@ -7,7 +7,6 @@ var formDataToJson = function(formData){
 }
 
 
-
 var getView = function(list){
 	var html = '<h3 class="heading-large">상세보기</h3>';
 
@@ -47,7 +46,7 @@ var getModify = function(list){
 		if(k === 'cino'){
 			html += '<th>' + k + '</th><td>' + list[0][k] + '<input type="hidden" name="' + k + '" value="' + list[0][k] + '"></td>';			
 		}else if(k.indexOf('img') != -1){
-			html += '<th>' + k + '</th><td><input type="file" name="' + k + '" value="' + list[0][k] + '" id="i"></td>';
+			html += '<th>' + k + '</th><td id="imgF"><input type="file" name="' + k + '" value="' + list[0][k] + '" id="i"><img class="modify_img" src="' + list[0][k] + '"></td>';
 		}else{
 			html += '<th>' + k + '</th><td><input type="text" name="' + k + '" value="' + list[0][k] + '" id="i"></td>';
 		}
@@ -70,44 +69,19 @@ function checkValues(values){
 			e.value='';
 			e.focus();
 			return false;
+		} else if(e.getAttribute('name').indexOf('img') != -1){
+			var file = e.value.toLowerCase().substring(e.value.lastIndexOf('.')+1);
+			if(file){
+				if(file != 'jpg' || file != 'png'){
+					alert('사진파일의 확장자는 jpg와 png만 가능합니다.')
+					return false;
+				}
+			}
 		}
 	}
 	return true;
 }
 
-var getInfoListNew = function(list){
-	var html = '';
-	list.forEach((e) => {
-		
-		html += '<div class="col-sm-3">';
-		html += '<div class="card text-center">';
-			
-			if(e['ciimg'] == null){
-				html += '<img class="card-img-top item_img" onclick="ciView('+ e["cino"] +')" src="/rsc/upload/no img.png" alt="Card image cap">';
-			}else{
-				html += '<img class="card-img-top item_img" onclick="ciView('+ e["cino"] +')" src="' + e["ciimg"] +'" alt="Card image cap">';				
-			}
-			
-			html += '<div class="card-body">';
-			html += '<input type="checkbox" name="chk" value="' + e["cino"] + '" style="cursor:pointer; margin:left;">'
-			html += '<h5 class="card-title">' + e["ciname"] + '</h5>';
-			
-			for(var k in e){  
-				if(k.indexOf('cipower')!=-1 ||k.indexOf('cicpu')!=-1 ||k.indexOf('cimb')!=-1 ||k.indexOf('ciram')!=-1 ||k.indexOf('civga')!=-1){
-					html += '<p class="card-text item_detail" onclick="search(\''+ k + '\',\'' + e[k] +  '\')">' + e[k] + '</p>';
-
-				}
-			}
-			
-			html += '<button type="button" onclick="ciView('+ e["cino"] +')" class="btn btn-outline-primary">자세하게</button>';
-			html += '</div>';
-			html += '</div>';
-			html += '</div>';
-	
-	});
-	
-	return html;
-}
 
 var getInfoListNewt = function(list){
 	var html = '<h3 class="heading-large">갤러리</h3>';

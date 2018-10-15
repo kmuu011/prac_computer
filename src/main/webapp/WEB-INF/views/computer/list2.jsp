@@ -203,10 +203,12 @@
 		
 		var au = new AjaxUtil(conf);
 		au.send();
+		
 		function updateView(res){
 			document.querySelector('#mainB').innerHTML = getModify(JSON.parse(res));
 			location.href= "#mainB";
 		}
+		
 	}
 	
 	function updateInfo(){
