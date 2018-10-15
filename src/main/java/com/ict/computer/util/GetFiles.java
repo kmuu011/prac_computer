@@ -40,20 +40,19 @@ public class GetFiles {
 					params.put(fi.getFieldName(), fi.getString("utf-8"));
 					
 				} else {
-					if(fi.getName() != "") {						
-					String fName = "/img" + System.currentTimeMillis() + fi.getName().substring(fi.getName().lastIndexOf("."));
-					String fPath = UP_PATH + fName;
-					
-					if(fi.getName().equals("")) continue;
-					
-					File sFile = new File(fPath);
-					
-					fi.write(sFile);
-					
-					params.put(fi.getFieldName(), "/rsc/upload" +fName);
+					if(fi.getName() != "") {
+						String fName = "/img" + System.currentTimeMillis() + fi.getName().substring(fi.getName().lastIndexOf("."));
+						String fPath = UP_PATH + fName;
+												
+						File sFile = new File(fPath);
+						
+						fi.write(sFile);
+						
+						params.put(fi.getFieldName(), "/rsc/upload" +fName);
 					}
 				}
 			}
+			System.out.println(params);
 			return params;
 			
 		} catch (FileUploadException e) {

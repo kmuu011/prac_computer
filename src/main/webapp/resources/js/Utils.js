@@ -46,7 +46,7 @@ var getModify = function(list){
 		if(k === 'cino'){
 			html += '<th>' + k + '</th><td>' + list[0][k] + '<input type="hidden" name="' + k + '" value="' + list[0][k] + '"></td>';			
 		}else if(k.indexOf('img') != -1){
-			html += '<th>' + k + '</th><td id="imgF"><input type="file" name="' + k + '" value="' + list[0][k] + '" id="i"><img class="modify_img" src="' + list[0][k] + '"></td>';
+			html += '<th>' + k + '</th><td id="imgF"><input type="file" name="' + k + '" value="' + list[0][k] + '" id="i"><img class="modify_img" src="' + list[0][k] + '"><button type="button" class="btn btn-outline-primary del_img" onclick="delImg(' + list[0]["cino"] + ')">사진 지우기</button></td>';
 		}else{
 			html += '<th>' + k + '</th><td><input type="text" name="' + k + '" value="' + list[0][k] + '" id="i"></td>';
 		}
@@ -72,7 +72,7 @@ function checkValues(values){
 		} else if(e.getAttribute('name').indexOf('img') != -1){
 			var file = e.value.toLowerCase().substring(e.value.lastIndexOf('.')+1);
 			if(file){
-				if(file != 'jpg' || file != 'png'){
+				if(file != 'jpg' && file != 'png'){
 					alert('사진파일의 확장자는 jpg와 png만 가능합니다.')
 					return false;
 				}
@@ -158,6 +158,7 @@ var recentInfo = function(list){
 		html += '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
 		html += '<button type="button" class="dropdown-item" onclick="ciView('+ e["cino"] +')">자세하게</button>';
 		html += '<button type="button" class="dropdown-item" onclick="modify('+ e["cino"] +')">수정하기</button>';
+		html += '<button type="button" class="dropdown-item" onclick="deleteInfo()">삭제하기</button><input type="checkbox" class="dropdown-item del" name="chk" value="' + e["cino"] + '">';
 		html += '</div>';
 		html += '</div>';
 		html += '</div>';

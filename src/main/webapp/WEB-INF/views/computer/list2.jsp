@@ -224,8 +224,12 @@
 		};
 		
 		function success(res){
-			alert("수정 완료!");
-			ciView(res);
+			if(res != -1){
+				alert("수정 완료!");
+				ciView(res);
+			}else{
+				alert('알 수 없는 이유로 수정이 실패했습니다.');
+			}
 		}
 			
 		var au = new AjaxUtil(conf);
@@ -247,6 +251,27 @@
 		document.querySelector('tBody').innerHTML = html;
 	}
 	
+	function delImg(cino){
+		var url = '/imgdelete/' + cino;
+		var method = 'PUT';
+		var conf = {url:url,
+				method:method,
+				success:deleteImg};
+		
+		var au = new AjaxUtil(conf);
+		au.send();
+		
+		function deleteImg(res){
+			if(res == 1){
+				document.querySelector('#imgF').innerHTML = '사진을 삭제했습니다.';				
+			}else if(res == -1){
+				alert('사진이 이미 존재하지 않습니다.');
+			}else{
+				alert('알 수 없는 이유로 삭제가 실패했습니다.');
+			}
+		}
+		
+	}
 	
 	//nav scroll
 	(function($) {

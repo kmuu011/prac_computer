@@ -16,5 +16,6 @@ public interface ComputerService {
 	
 	public List<ComputerInfo> getRecent();
 	
+	public Integer getDeleteImg(ComputerInfo ci);
 	
 }

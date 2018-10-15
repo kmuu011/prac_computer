@@ -80,7 +80,7 @@
   }
   
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #ffffff8f;
   }
   
   #mainNav.navbar-shrink .navbar-brand{
@@ -167,14 +167,10 @@
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
+
 #footer a:hover {
 	font-weight:800;
-}
-	
-
-	
-	
-	
+}	
 
 #form{
 	margin: 2% 10%;
@@ -231,3 +227,10 @@ input.dropdown-item.del {
     margin-bottom: 10px;
 }
 
+.modify_img{
+	height:100px;
+}
+
+.del_img{
+	margin-left: 19px;
+}

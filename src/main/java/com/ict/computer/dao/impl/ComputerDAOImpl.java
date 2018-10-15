@@ -50,5 +50,10 @@ public class ComputerDAOImpl implements ComputerDAO{
 		return ss.selectList("SQL.COMPUTER.selectRecent");
 	}
 
+	@Override
+	public Integer deleteImg(ComputerInfo ci) {
+		return ss.update("SQL.COMPUTER.updateComputerInfo", ci);
+	}
+
 
 }

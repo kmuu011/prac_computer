@@ -64,7 +64,7 @@ public class ComputerServiceImpl implements ComputerService{
 		int result = cd.updateComputerInfo(ci);
 		
 		if(result == 0) {
-			return null;
+			return -1;
 		}
 		
 		return ci.getCino();
@@ -73,6 +73,18 @@ public class ComputerServiceImpl implements ComputerService{
 	@Override
 	public List<ComputerInfo> getRecent() {
 		return cd.selectRecent();
+	}
+
+	@Override
+	public Integer getDeleteImg(ComputerInfo ci) {
+		String img = cd.selectImg(ci);
+		System.out.println(img);
+		if(img == null) {
+			return -1;
+		}
+		GetFiles.deleteFile(img);
+		
+		return cd.deleteImg(ci);
 	}
 
 

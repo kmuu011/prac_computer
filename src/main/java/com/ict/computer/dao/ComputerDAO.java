@@ -18,6 +18,7 @@ public interface ComputerDAO {
 	
 	public List<ComputerInfo> selectRecent();
 
+	public Integer deleteImg(ComputerInfo ci);
 	
 
 	

@@ -97,7 +97,15 @@ public class ComputerServlet {
 		return cs.getUpdateResult(ci);
 	}
 	
-	
+	@RequestMapping(value="/imgdelete/{cino}", method=RequestMethod.PUT)
+	@ResponseBody
+	public Integer deleteImg(@PathVariable Integer cino) {
+		ComputerInfo ci = new ComputerInfo();
+		ci.setCino(cino);
+		ci.setCiimg("");
+		
+		return cs.getDeleteImg(ci);
+	}
 	
 
 }
