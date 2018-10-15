@@ -26,13 +26,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100"  src="https://blogfiles.pstatic.net/MjAxODEwMTJfMjQ2/MDAxNTM5MzMxODI5MzEx.AxUU82G_O1S7MUfuHFF6T6juep9jyu_HqWTciK3Q4aMg.zX87JFXufWX-CUfAlnVUpY-q3mi1THKfADfdwpSHs5Ug.JPEG.hartshorn/000010.JPG"  alt="First slide">
+      <img class="d-block w-100"  src="/rsc/img/23.jpg"  alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://blogfiles.pstatic.net/MjAxODEwMTJfMjM0/MDAxNTM5MzMxODI5NDgz.J8EYnOduTxIfYyUHIJGV1OfYNly2YmM2H23MXqMkjpQg.65iG8fFIZYzHQi4RlO88muSlEHZGir4kxxIh7Pcxb-cg.JPEG.hartshorn/000031.JPG"  alt="Second slide">
+      <img class="d-block w-100" src="/rsc/img/26.jpg"  alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://blogfiles.pstatic.net/MjAxODEwMTJfMjU4/MDAxNTM5MzMxODI5Mzk4.TbPba-Q6JYKMmr0HamNa_ZIdBgxo1ZZwfISlV-ILAigg.UyhypnOsVYEMuei1XD8nsrz6-p2-pCcCKX5mwhQJiEMg.JPEG.hartshorn/000019.JPG"   alt="Third slide">
+      <img class="d-block w-100" src="/rsc/img/25.jpg"  onclick="window.open('https://www.instagram.com/p/BoTVHRpD_pw/?taken-by=seunng')" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -6,22 +6,7 @@ var formDataToJson = function(formData){
 	return JSON.stringify(paramObj);
 }
 
-var getInfoList = function(list){
-	var html = '';
-	
-	list.forEach((e) => {
-		html += '<tr>';
-		html += '<td><input type="checkbox" name="chk" value="' + e["cino"] + '" style="cursor:pointer"></td>';
-		
-		for(var k in e){
-			html += '<td onclick="ciView(' + e["cino"] + ')">' + e[k] + '</td>';
-		}
-		
-		html += '</tr>';
-		
-	});
-	return html; 
-}
+
 
 var getView = function(list){
 	var html = '<h3 class="heading-large">상세보기</h3>';
