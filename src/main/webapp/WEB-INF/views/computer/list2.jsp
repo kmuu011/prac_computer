@@ -21,13 +21,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100"  src="/rsc/img/23.jpg"  alt="First slide">
+      <img class="d-block w-100"  src="/rsc/img/1p.jpg"  alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/rsc/img/26.jpg"  alt="Second slide">
+      <img class="d-block w-100" src="/rsc/img/2p.jpg"  alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/rsc/img/25.jpg"  onclick="window.open('https://www.instagram.com/p/BoTVHRpD_pw/?taken-by=seunng')" alt="Third slide">
+      <img class="d-block w-100" src="/rsc/img/3p.jpg"  onclick="window.open('https://www.instagram.com/p/BoTVHRpD_pw/?taken-by=seunng')" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
